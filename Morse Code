@@ -1,0 +1,19 @@
+#Write a program that generates the Morse code for a sentence that ends in a period and contains no other characters except letters and blanks. After reading the Morse code into a list or dictionary, your program should read each word of the sentence and display its Morse equivalent on a separate line. 
+
+
+morse_dict = {"A": ".-", "B": "-…", "C": "-.-.", "D": "-..", "E": ".", "F": "..-.", "G": "--.", "H": "….",
+"I": "..", "J": ".---", "K": "-.-", "L": ".-..", "M": "--", "N": "-.", "O": "---", "P": ".--.",
+"Q": "--.-", "R": ".-.", "S": "…", "T": "-", "U": "..-", "V": "…-", "W": ".--", "X": "-..-",
+"Y": "-.--", "Z": "--..", " ": "  ", ",": ","}
+
+#print(morse_dict['ABC'[1]])
+
+def convert_morse(input):
+    for i in range (0, len(input)):
+        output = morse_dict[str.upper(input[i])]
+        i += 1
+        print (output, end = " ")
+        #return output
+
+
+convert_morse('ABc, DeF')
